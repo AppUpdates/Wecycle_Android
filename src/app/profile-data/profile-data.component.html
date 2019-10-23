@@ -1,0 +1,57 @@
+<section class="profile_section topSpace" id="main">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a href="#" routerLink="/settings" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+          <p class="mb-0">Profile</p>
+        </div>
+        <!-- <app-header></app-header> -->
+      </div>
+      
+      
+      <form class="example-form">
+          <label for="imageupload" class="imageUpload" (click)="presentActionSheet();">
+              <span *ngIf="!base64Image">Upload Your Profile Picture</span>
+              <!-- <input #file type="file" accept='image/*' (change)="preview(file.files)" id="imageupload"  [(ngModel)]="user.image" [ngModelOptions]="{standalone: true}"/> -->
+              <img [src]="base64Image" class="img-fluid" *ngIf="base64Image">
+            </label>
+        <mat-form-field floatLabel="never" class="margin">          
+          <input matInput placeholder="First Name" [(ngModel)]="user.fname" [ngModelOptions]="{standalone: true}">
+          <img matSuffix src="assets/img/formicon1.png">
+        </mat-form-field>
+        <mat-form-field floatLabel="never">          
+          <input matInput placeholder="Last Name" [(ngModel)]="user.lname" [ngModelOptions]="{standalone: true}">
+          <img matSuffix src="assets/img/formicon2.png">
+        </mat-form-field>
+        <mat-form-field floatLabel="never">
+            <input matInput readonly [(ngModel)]="myDate"
+            [liIonic4Datepicker]="datePickerObj"
+            (click)="openDatePicker()"
+            placeholder="DOB"
+            [ngModelOptions]="{standalone: true}">
+    
+            <!-- <li-ionic4-datepicker [(ngModel)]="mydate" 
+            [inputDateConfig]="datePickerObj"  ></li-ionic4-datepicker> -->
+          <!-- <input matInput (click)="placeholder="Mumbai, IN"picker.open()" [matDatepicker]="picker" placeholder="DOB" [(ngModel)]="user.dob" [ngModelOptions]="{standalone: true}"> -->
+          <img matSuffix src="assets/img/formicon3.png">
+          <!-- <mat-datepicker #picker ></mat-datepicker>    -->
+        </mat-form-field>
+        <mat-form-field floatLabel="never">          
+          <input matInput placeholder="Mumbai, IN"  autocomplete="off" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()" [ngModelOptions]="{standalone: true}">
+          <img matSuffix src="assets/img/formicon4.png">
+        </mat-form-field>
+
+        <ion-list [hidden]="autocompleteItems.length == 0" style="margin-left: -14px;
+        margin-right: 0;
+        margin-top: -21px;">
+                    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                      {{ item.description }}
+                    </ion-item>
+                  </ion-list>
+        <button mat-flat-button class="btncreate_account btn_gradient" (click)="GoToDescription()">Next</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- routerLink="/description" -->

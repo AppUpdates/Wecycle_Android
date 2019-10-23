@@ -1,0 +1,17 @@
+.tagOne{
+    font-size: 12px;
+    line-height: 22px;
+    color: #586167;
+}
+.tagOne a{
+    color: #586167;
+    font-weight: 500;
+}
+.text-center {
+	text-align: center!important
+}
+#main{
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+}

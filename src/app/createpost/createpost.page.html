@@ -1,0 +1,93 @@
+  <section class="profile_section topSpace" id="main">
+    <div class="contentBlock topSpace">
+      <div fxLayout="row">
+        <div fxFlex="100" class="grid-space">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <a href="#" routerLink="/activity" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+            <p class="mb-0">Create Post</p>
+          </div>
+         
+          <!-- <button mat-mini-fab class="search_btn"  routerLink="/filter">
+            <mat-icon aria-label="Example icon-button">search</mat-icon>
+          </button> -->
+          <!-- <app-header></app-header> -->
+        </div>       
+        </div>
+      </div>
+    </div>
+
+        <!-- <ion-header>
+            <ion-toolbar>               
+                    <button ion-button icon-only (click)="back()" style="background: transparent;box-shadow: none">
+                        <a href="#" routerLink="/welcome" ><img src="assets/img/arrow.png" ></a>
+                    </button>                    
+              <ion-title style="font-weight: 400;font-size:15px;    margin-top: -22px;" text-center>
+                Create Post
+              </ion-title>
+            </ion-toolbar>
+          </ion-header> -->
+
+       
+        
+          <div class="contentBlock topSpace">
+            <div fxLayout="row">
+              <div fxFlex="100" class="grid-space"> 
+        <form class="example-form">
+            <!-- <label for="imageupload" class="imageUpload" (click)="getImages();">
+                <span *ngIf="!base64Image">Upload Your Post Picture</span>
+                <img [src]="'data:image/jpeg;base64,'+base64Image" class="img-fluid" *ngIf="base64Image">
+              </label> -->
+
+          <ion-col>
+            <!-- More Pinterest floating gallery style -->
+            <div class="images">
+              <div class="one-image" *ngFor="let img of imageResponse">
+                <img src="{{img}}" alt="" srcset="">
+              </div>
+            </div>
+          </ion-col>
+
+
+        <button text-center (click)="getImages()" style="width: 45%;
+        margin-left: 30%;background: linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);color: #fff;padding: 15px;">Choose Post Images</button>
+    
+          <mat-form-field floatLabel="never" class="margin">          
+            <input matInput placeholder="Post Name" [(ngModel)]="post.postname" [ngModelOptions]="{standalone: true}">
+            <!-- <img matSuffix src="assets/img/formicon1.png"> -->
+          </mat-form-field>
+  
+       
+            <ion-select placeholder="Select Ride" style="padding: 0.75em 0px;margin-top: -11px;border-bottom: 0.7px solid #d7dde1;" [ngModelOptions]="{standalone: true}" [(ngModel)]="selected">
+              <ion-select-option *ngFor="let item of categorytype" value="{{item.id}}">{{item.catname}}</ion-select-option>
+            </ion-select>
+          
+         
+
+          <mat-form-field floatLabel="never" style="margin-top: 11px">          
+            <input matInput placeholder="Description" [(ngModel)]="post.discription" [ngModelOptions]="{standalone: true}">
+            <!-- <img matSuffix src="assets/img/formicon2.png"> -->
+          </mat-form-field>
+          <mat-form-field floatLabel="never" style="margin-top: -5px">          
+            <input matInput placeholder="Mumbai, IN"  autocomplete="off" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()" [ngModelOptions]="{standalone: true}">
+            <!-- <img matSuffix src="assets/img/formicon4.png"> -->
+          </mat-form-field>
+
+          <!-- <ion-searchbar style="min-height: 0px;" [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()"
+          placeholder="Select city" [ngModelOptions]="{standalone: true}"></ion-searchbar> -->
+       
+              <ion-list [hidden]="autocompleteItems.length == 0" style="margin-left: -14px;
+    margin-right: 0;
+    margin-top: -21px;">
+                <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                  {{ item.description }}
+                </ion-item>
+              </ion-list>
+          <button mat-flat-button class="btncreate_account btn_gradient" (click)="CreatePost()">Post</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </section>
+  
+  <!-- routerLink="/description" -->

@@ -1,0 +1,37 @@
+
+<ion-content>
+  <a href="#" routerLink="/blog" class="prev_arrow mr-30" style="padding: 10px;
+  "><img src="assets/img/arrow.png" style="margin-top: 17px;"></a>
+ 
+ <ion-list *ngFor="let comment of comments" lines="none">   
+   <ion-item>
+    <ion-avatar slot="start">
+      <img src="http://68.183.101.193/android/api/{{comment.profile}}">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{comment.first_name}} {{comment.last_name}}</h2>
+      <p>{{comment.comment}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+  </ion-content>
+ 
+ <ion-footer>
+   <ion-list lines="none">
+     <ion-item >
+         <ion-avatar>
+             <img [src]="user_pic">
+        </ion-avatar>
+      
+       <ion-input style="border-bottom: 1px solid #dbd7d7;
+       margin-left: 10px;" [(ngModel)]="commenttext" [ngModelOptions]="{standalone: true}"  (ionChange)="showVal($event)"></ion-input>
+       <ion-button style="--background: #fff;
+       color: #3880ff;
+       --box-shadow: none;" (click)="postcomment()" [disabled]="!isenabled">Post</ion-button>
+     </ion-item>
+     
+   </ion-list>
+ </ion-footer>
+ 
+ 

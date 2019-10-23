@@ -1,0 +1,121 @@
+@import '../create-account/form-stylesheet.css';
+.blockShadow{
+    box-shadow: 0 7px 30px 2px rgba(0,0,0,.1);
+    margin: 0 auto;
+    padding: 15px 35px 25px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: -150px;
+    margin-bottom: 80px;
+    max-width: 384px;
+}
+.example-form{
+    margin-top: 20px;
+}
+.gradientBack{
+    margin-top: 114px;
+    height: 102px;
+    box-shadow: 0 3px 10px #cec3c3;
+    background-image: linear-gradient(to right, #1308fe , #9025fc);
+    background-image: -webkit-linear-gradient(to right, #1308fe , #9025fc);
+    background-image: -moz-linear-gradient(to right, #1308fe , #9025fc);
+}
+.btncreate_account{
+    max-width: 217px;
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    max-width: 315px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+}
+.headOne{
+    margin-top: 36px;
+}
+@media(max-width:360px){
+    .blockShadow{
+        padding: 10px 20px 20px;
+        margin-top: -140px;
+        margin-bottom: 80px;
+        max-width: 360px;
+    }
+    .gradientBack{
+        margin-top: 80px;
+    }
+    .space60 {
+        margin-top: 40px !important;
+    }
+}
+
+.topSpace{
+    padding-top: 20px;
+}
+
+.contentBlock{
+    max-width: 576px;
+}
+
+.mx-auto,.contentBlock{
+    margin-right:auto!important;
+    margin-left:auto!important;
+}
+
+.grid-space{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.prev_arrow{
+    display: flex;
+}
+
+@media(max-width:360px){
+    .headOne {
+        font-size: 28px;
+    }
+    .btncreate_account{
+        max-width: 230px;
+    }
+}
+
+.btn_gradient{
+    background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+}
+.tagOne,.default_clr{
+    color: #778087;
+}
+
+.d-block{
+    display:block!important;
+}
+
+.space60 {
+    margin-top: 60px !important; }
+
+    .text-center {
+        text-align: center!important
+    }
+
+    .space30 {
+        margin-top: 30px !important; }
+
+        .mat-form-field-underline {
+            top: 10px;    /* replace this color with your accent color hex code */
+        }
+
+        #main{
+            min-height: 100vh;
+            overflow: auto;
+            position: relative;
+        }

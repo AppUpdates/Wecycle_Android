@@ -1,0 +1,171 @@
+@import '../create-account/form-stylesheet.css';
+.short_description{
+    background: #fff;
+}
+.float-container {
+    border: solid 1px #ccc;
+    padding: 0 8px;
+    position: relative;
+  }
+  .float-container input {
+    border: none;
+    font-size: 16px;
+    margin: 16px 0 10px;
+    outline: 0;
+  }
+  label {
+    font-size: 16px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all .1s ease-in-out;
+  }
+  .float-container.active label {
+    transform: translate(0, 4px) scale(.75);
+  }
+.profile_title{
+    font-size: 16px;
+    color: #171f24;
+    margin-top: 30px;
+}
+.descriptions-form{
+    margin-top: 30px;
+}
+.short_description .mat-form-field{
+    display: block;
+}
+.connect_social{
+    font-size: 12px;
+    color: #aab2b7;
+    text-align: center;
+    margin-top: 40px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.buttons-form{
+    margin-top: 30px;
+}
+.social_button{
+    font-size: 16px;
+    color: #ffffff;
+    width: 45%;
+    border-radius: 30px;
+    margin: 0 1%;
+    padding: 7px 15px;
+    border: none;
+    box-shadow: 0 15px 30px rgba(221, 221, 221, 0.75);
+}
+.twitter_btn{
+    background-color: #08a0e9;
+}
+.google_btn{
+    background-color: #de4b39;
+}
+.youtube_btn{
+    background-color: #ce201f;
+}
+.facebook_btn{
+    background-color: #3b5999;
+}
+.buttons-form .btncreate_account{
+    margin: 60px auto 20px;
+}
+:host ::ng-deep .mat-dialog-container {
+    box-shadow: none;
+    background: transparent;
+    color: rgba(0,0,0,.87);
+}
+
+.updating_profile{
+    position: absolute;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 6px;
+    bottom: 50px;
+    top: auto;
+    left: 15px;
+    right: 15px;
+}
+.updating_profile h3{
+    font-size: 20px;
+    color: #30363a;
+}
+.updating_profile p{
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 0;
+}
+.spinner{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    animation: spin 2s linear infinite;
+}
+:host ::ng-deep .cdk-overlay-dark-backdrop {
+    background: rgba(173, 93, 253, 0.84);
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.topSpace{
+    padding-top: 20px;
+}
+
+.grid-space{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.prev_arrow{
+    display: flex;
+}
+.mr-30{
+    margin-right: 32px;
+}
+.text-center {
+	text-align: center!important
+}
+@media(max-width:360px){
+    .btncreate_account{
+        max-width: 230px;
+    }
+}
+.btncreate_account{
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    /* max-width: 315px; */
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+}
+.btn_gradient{
+    background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+}
+
+:host ::ng-deep .mat-drawer-container[_ngcontent-c1] {
+    background-color: transparent;
+}
+
+:host ::ng-deep .mat-button[_ngcontent-c1] {
+    background: transparent;
+}
+#main{
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+}

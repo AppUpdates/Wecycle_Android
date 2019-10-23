@@ -1,0 +1,82 @@
+<ion-content class="has-header">
+<div class="blog_banner" id="main">
+  <div fxLayout="row">
+    <div fxFlex="100" class="grid-space">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+               
+              <a href="#" routerLink="/activity" class="prev_arrow mr-30" style="padding: 10px;"><img src="assets/img/arrow.png" ></a>
+            </div>
+            <!-- <app-header></app-header> -->
+          </div>
+      <ion-slides>
+      <ion-slide *ngFor="let post_media of post_media">     
+          <ion-card>
+              <img src="http://68.183.101.193/android/api/{{post_media}}"  class="w-100 mask_img" alt="..."> 
+          </ion-card>
+      
+      </ion-slide>
+    </ion-slides>
+      
+      
+        <!-- <a href="#" routerLink="."><img src="assets/img/arrow.png" alt="..."></a> -->
+    </div>
+  </div>
+</div>
+<div *ngFor="let mypost of mypost">
+<div class="blog_body blog_btm">
+  <div fxLayout="row">
+    <div fxFlex="100" class="grid-space">
+        <h3 class="blog_title">{{mypost.postname}}</h3>
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxFlex="15" class="blog-g-space">
+     <img src="http://68.183.101.193/android/api/{{mypost.profile}}" class="w-100 mask_img" alt="..." style="    width: 50px;
+     height: 40px;    border-radius: 50px;"  onerror="this.onerror=null;this.src='assets/img/Mask_img.png';"> 
+    </div>
+    <div fxFlex="35">
+       <div class="post_details">
+        <h4 style="margin-top: 3px;margin-left: 3px;">{{mypost.first_name}} {{mypost.last_name}}</h4>
+        <p style="margin-left: 3px;">{{mypost.time_ago}}</p>
+        <p><mat-icon>place</mat-icon>{{mypost.location}}</p>
+      </div> 
+      </div>
+      <div fxFlex="45">
+        <ul class="views_comments">
+          <li><span (click)="GoToComment(mypost.id)"><mat-icon>message</mat-icon> {{mypost.total_comments}} &nbsp;</span></li>
+          <li><span><mat-icon>visibility</mat-icon> {{mypost.total_views}} &nbsp;</span></li>
+          <li>
+            <span>
+            <mat-icon *ngIf="mypost.is_post_like == null || mypost.is_post_like == '0'">favorite_border</mat-icon>
+            <mat-icon *ngIf="mypost.is_post_like == '1'">favorite</mat-icon>
+             {{mypost.total_likes}} 
+            </span>
+          </li>
+          <!-- 25.2k -->
+        </ul>
+      </div>
+  </div>
+  <div fxLayout="row" class="mt-15">
+      <div fxFlex="100" class="grid-space">
+         <p class="text1">{{mypost.description}} </p> 
+        <!-- <p class="text2"></p> -->
+      </div>
+  </div>
+  <div class="mt-50"></div>
+</div>
+<div [class.active]="classApplied" class="share_cmt_button">
+    <ul class="all_btn">
+      <li><button mat-raised-button style="background: #fff;" (click)="SharePost()"><mat-icon>share</mat-icon></button></li>
+      <li><button mat-raised-button style="background: #fff;"  (click)="likeUnlike(mypost.id,mypost.is_post_like)">
+          <mat-icon *ngIf="mypost.is_post_like == null || mypost.is_post_like == '0'">favorite_border</mat-icon>
+          <mat-icon *ngIf="mypost.is_post_like == '1'">favorite</mat-icon>
+      </button></li>
+      <li><button style="background: #fff;" mat-raised-button (click)="GoToComment(mypost.id)"><mat-icon>message</mat-icon></button></li>
+    </ul>
+    <button mat-raised-button class="share_cmt_btn" (click)="toggleClass()"><mat-icon>add</mat-icon></button>
+</div>
+
+</div>
+</ion-content>

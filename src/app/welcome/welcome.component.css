@@ -1,0 +1,221 @@
+.btncreate_account{
+    margin-top: 50px;
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    max-width: 315px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+}
+.welcome{
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.mx-auto,.contentBlock{
+  margin-right:auto!important;
+  margin-left:auto!important;
+}
+
+.d-block{
+  display:block!important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* the loader */
+
+.load {
+    display: flex;
+    align-items: center;
+    position:relative;
+    height: 360px;
+    margin: 0 auto;
+    animation: pulse 2000ms linear infinite;
+    -webkit-animation: pulse 2000ms linear infinite;
+    -moz-animation: pulse 2000ms linear infinite;
+  }
+ 
+  .load:after,
+  .load:before {
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 17px #999999;
+    left: 0;
+    right: 0;
+    /* top: 25px; */
+  }
+  
+  .load:after {
+    z-index: -100;
+    -webkit-animation: outer-ripple 2000ms linear infinite;
+    -moz-animation: outer-ripple 2000ms linear infinite;
+    animation: outer-ripple 2000ms linear infinite;
+  }
+  
+  .load:before {
+    z-index: -200;
+    -webkit-animation: inner-ripple 2000ms linear infinite;
+    -moz-animation: inner-ripple 2000ms linear infinite;
+    animation: inner-ripple 2000ms linear infinite;
+  }
+  /* outer ripple */
+  
+  .headOne{
+    font-size: 34px;
+}
+
+.btn_gradient{
+  background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+  background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+  background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+  background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+  /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+}
+
+  @keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    80% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    80% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    80% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+  /* inner ripple */
+  
+  @keyframes inner-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    30% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes inner-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    30% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes inner-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    30% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+
+  @media(max-width:360px){
+    .headOne {
+        font-size: 28px;
+    }
+    .btncreate_account{
+        max-width: 230px;
+    }
+  }
+    .tagOne,.default_clr{
+      color: #778087;
+  }
+
+  .text-center {
+    text-align: center!important
+  }
+  #main{
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+
+  

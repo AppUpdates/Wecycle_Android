@@ -1,0 +1,114 @@
+
+img{
+    width:100%;
+    height:100%;
+  }
+  
+  .myCard{
+    position:relative;
+  
+  }
+  
+  .myOverlay{
+    width: 100%;
+      height: 100%;
+      /* position: absolute; */
+      z-index: 99;
+      bottom: 0px;
+      /* opacity: 0.5; */
+      background: #fff;
+      color: #fff;
+  
+  }
+.banner{
+    background: url(../../assets/img/signup_banner.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 370px;
+}
+.headOne{
+    margin: 40px 0 18px;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 7px 30px 2px rgba(0,0,0,.1);
+    margin: -80px auto 0;
+    padding: 42px 0;
+    max-width: 345px;
+}
+:host .mat-card {
+    border-radius: 6px;
+}
+.btncreate_account{
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    max-width: 315px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+    background-image: linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -webkit-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -moz-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -ms-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    margin: 36px auto 18px;
+}
+
+@media(max-width:360px){
+    .banner{
+        height: 350px;
+    }
+    .headOne {
+        margin: 30px 0 18px;
+    }
+}
+
+.grid-space{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.mb-0{
+    margin-bottom:0!important
+}
+.text-center {
+	text-align: center!important
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.mx-auto,.contentBlock{
+    margin-right:auto!important;
+    margin-left:auto!important;
+}
+.d-block{
+    display:block!important;
+}
+.tagOne,.default_clr{
+    color: #778087;
+}
+.tagOne{
+    font-size: 17px;
+}
+@media(max-width:360px){
+    .headOne {
+        font-size: 28px;
+    }
+    .btncreate_account{
+        max-width: 230px;
+    }
+}
+.btn_gradient1{
+    background-image: linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -webkit-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -moz-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -ms-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    margin: 36px auto 18px;
+}

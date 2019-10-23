@@ -1,0 +1,79 @@
+<section class="verify_account topSpace" id="main">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space"> 
+      <a href="#" class="prev_arrow" routerLink="/create-account"><img src="assets/img/arrow.png" ></a>       
+      <h2 class="headOne">Verify your<br> account</h2>
+      <p class="small-tag default_clr">Verification code sent to your registered email address</p>
+      <div fxLayout="row" fxLayoutAlign="center center" class="password_container display_num">
+        <div class="digitHolder cursor_class">
+          <span class="numTxtbox"></span>
+        </div>
+        <div class="digitHolder">
+          <span class="numTxtbox"></span>
+        </div>
+        <div class="digitHolder">
+          <span class="numTxtbox"></span>
+        </div>
+        <div class="digitHolder">
+          <span class="numTxtbox"></span>
+        </div>
+        <!-- <input type="text" maxlength="1" class="numTxtbox" >
+        <input type="text" maxlength="1" class="numTxtbox">
+        <input type="text" maxlength="1" class="numTxtbox">
+        <input type="text" maxlength="1" class="numTxtbox"> -->
+      </div>
+      
+      <div class="keypad mx-auto">
+        <div fxLayout="row" class="text-center">
+          <div fxFlex="33.33">
+            <button mat-flat-button class="numerics keybtn">1</button>
+          </div>
+          <div fxFlex="33.33">
+            <button mat-flat-button class="numerics keybtn">2</button>
+          </div>
+          <div fxFlex="33.33">
+            <button mat-flat-button class="numerics keybtn">3</button>
+          </div>
+        </div>
+        <div fxLayout="row" class="text-center space10">
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">4</button>
+          </div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">5</button>
+          </div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">6</button>
+          </div>
+        </div>
+        <div fxLayout="row" class="text-center space10">
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">7</button>
+          </div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">8</button>
+          </div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">9</button>
+          </div>
+        </div>
+        <div fxLayout="row" class="text-center space10">
+          <div fxFlex="33"></div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics keybtn">0</button>
+          </div>
+          <div fxFlex="33">
+            <button mat-flat-button class="numerics" id="clear">
+              <img src="assets/img/cancel.png" >
+            </button>
+          </div>
+        </div>
+      </div>
+      <button mat-flat-button class="btncreate_account btn_gradient" (click)="GetVerify()">Continue</button>
+      <p class="tagOne text-center">
+        <a  (click)="ResendCode()" class="linktag">Resend</a> Verification Code to <br>
+          {{email}}
+      </p>        
+    </div>
+  </div>
+</section>

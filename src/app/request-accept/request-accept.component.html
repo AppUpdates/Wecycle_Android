@@ -1,0 +1,92 @@
+<ion-content class="has-header">
+<section class="request_accept topSpace">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a href="#" routerLink="/welcome" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+          <p class="mb-0">Profile</p>
+        </div>
+        <app-header></app-header>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="space20">
+        <div class="profile_pic">
+          <img src="{{profile}}" onerror="this.onerror=null;this.src='assets/img/Mask_img.png';">
+        </div>
+        <div *ngIf="!show">
+          <button mat-flat-button (click)="show = true" class="btncreate_account btn_gradient" (click)="action_request(1)">
+            Accept</button>
+          <button mat-flat-button class="btncreate_account btn_gradient1 space15" (click)="action_request(2)">Decline</button>
+        </div>
+        <div *ngIf="show">
+          <button mat-flat-button class="btn_unfollow space15">Unfollow</button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" class="space20">
+        <h4 class="mb-0 userName">{{fname}} {{lname}}</h4>
+        <!-- <a href="#" routerLink="." class="linktag">#dhrup.ronak</a> -->
+      </div>
+      <p class="small-tag default_clr space10 lineHeight-18">{{description}}</p>
+      <div fxLayout="row" fxLayoutAlign="space-between start" class="text-center stats">
+        <div>
+          <p class="tagOne">{{totalMedia}}</p>
+          <p class="small-tag">Photos</p>
+        </div>
+        <div>
+          <p class="tagOne">0</p>
+          <p class="small-tag">Documents</p>
+        </div>
+        <div>
+          <p class="tagOne">0</p>
+          <p class="small-tag">Articles</p>
+        </div>
+        <div>
+          <p class="tagOne">{{totalFollowers}}</p>
+          <p class="small-tag">Followers</p>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" class="contentBlock padleft15 overflowhidden space35">
+    <p class="mb-0 followertag">Followers</p>
+    <div class=" card">
+      <div *ngFor="let image of images" class="text-center card--content">
+          <img src="assets/img/follower.png" class="img-follower">
+          <p class="mb-0 small-tag">{{image.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div  class="contentBlock grid-space space35">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <p class="mb-0">Photos</p>
+      <a href="#" class="small-tag">View All</a>
+    </div>
+    <div class="space30" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxFlex="33.33" class="photoBlocks">
+        <div class="photosBlock">
+          <img src="assets/img/photos.png" >
+        </div>
+      </div>
+      <div fxFlex="33.33" class="photoBlocks">
+        <div class="photosBlock">
+          <img src="assets/img/photos.png" >
+        </div>
+      </div>
+      <div fxFlex="33.33" class="photoBlocks">
+        <div class="photosBlock btn_gradient" fxLayout="row" fxLayoutAlign="center center">
+          <a href="#" routerLink="." class="txt_white no-underline">+1234</a>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="space35">
+      <p class="mb-0">Articles</p>
+      <a href="#" class="small-tag">View All</a>
+    </div>
+    <div class="articleBlock"></div>
+    <div class="articleBlock"></div> 
+
+   
+  </div>   
+</section>
+
+</ion-content>

@@ -1,0 +1,183 @@
+<div class="contentBlock topSpace" >
+    <div fxLayout="row">
+      <div fxFlex="100" class="grid-space">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a href="#" routerLink="/filter" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+          <p class="mb-0">Explore activities</p>
+        </div>
+        <button mat-mini-fab class="search_btn"  routerLink="/createpost" style="    right: 75px;">
+          <mat-icon aria-label="Example icon-button">image</mat-icon>
+        </button>
+        <button mat-mini-fab class="search_btn"  routerLink="/filter">
+          <mat-icon aria-label="Example icon-button">search</mat-icon>
+        </button>
+        <!-- <button mat-mini-fab class="search_btn"  routerLink="/filter">
+          <mat-icon aria-label="Example icon-button">search</mat-icon>
+        </button> -->
+        <!-- <app-header></app-header> -->
+      </div>       
+      </div>
+    </div>
+  </div>
+  <div class="contentBlock topSpace" id="main">
+    <div fxLayout="row">
+      <div fxFlex="100" class="grid-space">      
+          <!-- <div class="search_box" [class.active]="classApplied">
+              <form class="search-form">
+                <mat-form-field floatLabel="never">          
+                  <input matInput placeholder="Search...">
+                </mat-form-field>                
+              </form>          
+          </div> -->
+  
+          <div fxLayout="row" class="activitie_tab" >
+            <div fxFlex="100" class="space30">
+              <ion-segment [(ngModel)]="selectedSegment" (ionChange)="onSegmentChanged($event)"  >
+                <ion-segment-button value="popular" class="segmentcss">
+                  Popular
+                </ion-segment-button>
+                <ion-segment-button value="latest"  class="segmentcss">
+                  Latest
+                </ion-segment-button>
+                <ion-segment-button value="following"  class="segmentcss">
+                  Following
+                </ion-segment-button>
+              </ion-segment>
+
+<!-- <ion-slides>
+      <ion-slide>     
+         
+      
+      </ion-slide>
+    </ion-slides> -->
+
+              <div *ngIf="showPopular">
+              <div  class="myfirst_tab" *ngFor="let item_popular of mypost_popular" > 
+                <div fxLayout="row">
+                  <div fxFlex="15" class="blog-g-space"> 
+                    <img src="http://68.183.101.193/android/api/{{item_popular.profile}}" class="w-100 mask_img" alt="..." style="    width: 50px;
+                    height: 40px; border-radius: 50px;"  onerror="this.onerror=null;this.src='assets/img/Mask_img.png';">
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" style="margin-top:-16px;"> 
+                    <div class="post_details">
+                      <h4 (click)="gotoviewprofile(item_popular.userid)">{{item_popular.first_name}} {{item_popular.last_name}}</h4>
+                      <p>{{item_popular.time_ago}} &nbsp; <mat-icon>place</mat-icon> {{item_popular.location}}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="12" class="blog-g-space text-right"> 
+                      <a (click)="gotoblog(item_popular.id,item_popular.postname)"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>  
+                      <!-- <a href="#" routerLink="/blog/{{item_popular.id}}"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>   -->
+                  </div>
+                </div> 
+
+                <div fxLayout="row" class="mt-15">
+                  <div fxFlex="22" class="blog-g-space"> 
+                    <div class="post_details">                         
+                      <p><mat-icon>visibility</mat-icon> {{item_popular.total_views}} &nbsp;</p>
+                      <p>
+                          <mat-icon *ngIf="item_popular.is_post_like == null || item_popular.is_post_like == '0'">favorite_border</mat-icon>
+                          <mat-icon *ngIf="item_popular.is_post_like == '1'">favorite</mat-icon>
+                        {{item_popular.total_likes}} </p>
+                          <p><mat-icon>message</mat-icon> {{item_popular.total_comments}} &nbsp;  </p>
+                    </div>
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" (click)="gotoblog(item_popular.id,item_popular.postname)"> 
+                      <mat-card class="box_shadow" >
+                        <img src="http://68.183.101.193/android/api/{{item_popular.post_media[0]}}" class="w-100" alt="..." />
+                        <a routerLink="." class="post_link">{{item_popular.postname}}</a>
+                      </mat-card>
+                  </div>                      
+                </div>
+              </div> 
+            </div>
+
+              <div *ngIf="showLatest">
+              <div  class="myfirst_tab" *ngFor="let item_latest of mypost_latest" > 
+                <div fxLayout="row">
+                  <div fxFlex="15" class="blog-g-space"> 
+                    <img src="http://68.183.101.193/android/api/{{item_latest.profile}}" class="w-100 mask_img" alt="..." style="    width: 50px;
+                    height: 40px;    border-radius: 50px;"  onerror="this.onerror=null;this.src='assets/img/Mask_img.png';">
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" style="margin-top:-16px;"> 
+                    <div class="post_details">
+                      <h4 (click)="gotoviewprofile(item_latest.userid)">{{item_latest.first_name}} {{item_latest.last_name}}</h4>
+                      <p>{{item_latest.time_ago}} &nbsp; <mat-icon>place</mat-icon> {{item_latest.location}}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="12" class="blog-g-space text-right"> 
+                      <a (click)="gotoblog(item_latest.id)"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>  
+                      <!-- <a href="#" routerLink="/blog/{{item_latest.id}}"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>   -->
+                  </div>
+                </div> 
+
+                <div fxLayout="row" class="mt-15">
+                  <div fxFlex="22" class="blog-g-space"> 
+                    <div class="post_details">                         
+                      <p><mat-icon>visibility</mat-icon> {{item_latest.total_views}} &nbsp;</p>
+                      <p>
+                          <mat-icon *ngIf="item_latest.is_post_like == null || item_latest.is_post_like == '0'">favorite_border</mat-icon>
+                          <mat-icon *ngIf="item_latest.is_post_like == '1'">favorite</mat-icon>
+                        {{item_latest.total_likes}} </p>
+                          <p><mat-icon>message</mat-icon> {{item_latest.total_comments}} &nbsp;  </p>
+                    </div>
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" (click)="gotoblog(item_latest.id)"> 
+                      <mat-card class="box_shadow" >
+                        <img src="http://68.183.101.193/android/api/{{item_latest.post_media[0]}}" class="w-100" alt="..." />
+                        <a routerLink="." class="post_link">{{item_latest.postname}}</a>
+                      </mat-card>
+                  </div>                      
+                </div>
+              </div>
+            </div>
+
+              <div *ngIf="showFollowing">
+              <div  class="myfirst_tab" *ngFor="let item_following of mypost_following" > 
+                <div fxLayout="row">
+                  <div fxFlex="15" class="blog-g-space"> 
+                    <img src="http://68.183.101.193/android/api/{{item_following.profile}}" class="w-100 mask_img" alt="..." style="    width: 50px;
+                    height: 40px;    border-radius: 50px;"  onerror="this.onerror=null;this.src='assets/img/Mask_img.png';">
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" style="margin-top:-16px;"> 
+                    <div class="post_details">
+                      <h4 (click)="gotoviewprofile(item_following.userid)">{{item_following.first_name}} {{item_following.last_name}}</h4>
+                      <p>{{item_following.time_ago}} &nbsp; <mat-icon>place</mat-icon> {{item_following.location}}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="12" class="blog-g-space text-right"> 
+                      <a (click)="gotoblog(item_following.id)"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>  
+                      <!-- <a href="#" routerLink="/blog/{{item_following.id}}"  class="next_arrow1"><img src="assets/img/arrow_right.png" alt="..."></a>   -->
+                  </div>
+                </div> 
+
+                <div fxLayout="row" class="mt-15">
+                  <div fxFlex="22" class="blog-g-space"> 
+                    <div class="post_details">                         
+                      <p><mat-icon>visibility</mat-icon> {{item_following.total_views}} &nbsp;</p>
+                      <p>
+                          <mat-icon *ngIf="item_following.is_post_like == null || item_following.is_post_like == '0'">favorite_border</mat-icon>
+                          <mat-icon *ngIf="item_following.is_post_like == '1'">favorite</mat-icon>
+                        {{item_following.total_likes}} </p>
+                          <p><mat-icon>message</mat-icon> {{item_following.total_comments}} &nbsp;  </p>
+                    </div>
+                  </div>
+                  <div fxFlex="78" class="blog-g-space" (click)="gotoblog(item_following.id)"> 
+                      <mat-card class="box_shadow" >
+                        <img src="http://68.183.101.193/android/api/{{item_following.post_media[0]}}" class="w-100" alt="..." />
+                        <a routerLink="." class="post_link">{{item_following.postname}}</a>
+                      </mat-card>
+                  </div>                      
+                </div>
+              </div>
+            </div>
+
+
+             
+            </div>
+          </div>
+          <div class="mt-30"></div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,200 @@
+.profile_pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 20px #9e9e9e;
+    overflow: hidden;
+}
+.profile_pic img,.photosBlock img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btncreate_account{
+    width: 104px;
+    padding: 8px 0px!important;
+}
+.plus_icon{
+    font-size: 16px;
+    position: relative;
+    top: -2px;
+}
+.linktag{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.stats{
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 8px 28px #ececec;
+    padding: 35px 35px
+}
+.stats p{
+    margin-bottom: 0;
+}
+.mx-auto,.contentBlock{
+    margin-right:auto!important;
+    margin-left:auto!important;
+}
+.btncreate_account{
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    max-width: 315px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+}
+.stats .tagOne{
+    color: #171f24;
+}
+.stats .small-tag{
+    margin-top: 6px;
+}
+:host ::ng-deep .owl-item p,a.small-tag,.stats .small-tag{
+    color: #aab2b7;
+}
+.card {
+    background-color: #fff;
+    min-width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+  .mb-0{
+    margin-top: -3px;
+  }
+
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+.img-follower{
+    width: 60px !important;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    box-shadow: 0px 5px 25px #e6e6e6;
+}
+.owl-carousel {
+    touch-action: none;
+    z-index: 0;
+  }
+.overflowhidden{
+    overflow: hidden;        
+}
+.followertag{
+    margin-top: -20px;
+    margin-right: 10px;
+}
+.photosBlock{
+    border-radius: 4px;
+    height: 95px;
+    overflow: hidden;
+}
+.photoBlocks:not(:last-child){
+    margin-right: 30px;
+}
+.articleBlock{
+    border-radius: 4px;
+    background-color: #d8d8d8;
+    /* height: 244px; */
+    margin: 20px 0;
+}
+@media(max-width:360px){
+    .stats{
+        padding: 15px 20px
+    }
+    .photoBlocks:not(:last-child){
+        margin-right: 15px;
+    }
+    .photosBlock{
+        height: 85px;
+    }
+}
+.topSpace{
+    padding-top: 20px;
+}
+.contentBlock{
+    max-width: 576px;
+}
+.grid-space{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.prev_arrow{
+    display: flex;
+}
+.mr-30{
+    margin-right: 32px;
+}
+.mb-0{
+    margin-bottom:0!important
+}
+.space20 {
+    margin-top: 20px !important; }
+.btn_gradient{
+        background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+        background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+        background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+        background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+        /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+    }
+
+.space15 {
+        margin-top: 15px !important; }
+.userName{
+            font-size: 22px;
+        }
+.tagOne,.default_clr{
+            color: #778087;
+        }
+
+.space10 {
+            margin-top: 10px !important; }
+.lineHeight-18{
+                line-height: 18px;
+            }
+.text-center {
+                text-align: center!important
+            }
+.tagOne{
+                font-size: 17px;
+            }
+.padleft15{
+                padding-left: 15px;
+            }
+.space35 {
+                margin-top: 35px !important; }
+
+.space30 {
+                    margin-top: 30px !important; }
+
+                    .btn_gradient{
+                        background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+                        background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+                        background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+                        background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+                        /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+                    }
+                    .txt_white{
+                        color: #fff;
+                    }
+                    .no-underline{
+                        text-decoration: none;
+                    }
+
+                    #main{
+                        min-height: 100vh;
+                        overflow: auto;
+                        position: relative;
+                    }
+                    .card--content {
+                        min-width: 70px;
+                        margin: 5px;
+                        min-height: 1px;
+                      }

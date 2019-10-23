@@ -1,0 +1,27 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+.li-ionic4-datePicker {
+  .modal-wrapper {
+      height: 470px;
+      max-height: 100%;
+      width: 312px;
+      --ion-color-primary:linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);; // This Variable used for the change of colour ion-datepicker only.
+      --ion-color-primary-tint: linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);; // This Variable changes the tint colour of background when click button.
+      // ion-button {
+      //     // --ion-color-primary: green; // This Variable used for the change colour of buttons only.
+      //     // --ion-color-primary-tint: lightgreen; // This Variable changes the tint color of background when click buttons.
+      //     // --border-radious: 0px; // This Variable changes the border radious of buttons.
+      //     // button customization css write here...
+      // }
+  }
+}   

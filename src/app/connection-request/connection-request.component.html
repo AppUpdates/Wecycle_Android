@@ -1,0 +1,22 @@
+<section class="connection_section topSpace" id="main">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <!-- <a href="#" routerLink="/welcome" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a> -->
+          <p class="mb-0">Connection Request</p>
+        </div>
+        <app-header></app-header>
+      </div>
+      <div class="space40"></div>
+      <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let user of userdata" class="connectionBlock">
+        <img src="http://68.183.101.193/android/api/{{user.profile}}" class="user-icon" alt="user image">
+        <div class="userBlock">
+          <p class="mb-0" (click)="gotoaccept(user.user_id)">{{user.first_name}} {{user.last_name}}</p>
+          <!-- <p class="mb-0 small-tag">{{user.action}}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

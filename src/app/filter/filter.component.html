@@ -1,0 +1,58 @@
+  <div class="contentBlock topSpace" >
+    <div fxLayout="row">
+      <div fxFlex="100" class="grid-space">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <!-- <a href="#" routerLink="/activity" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a> -->
+          <p class="mb-0">Explore Connection & Activity</p>
+        </div>
+        <app-header></app-header>
+      </div>
+          <!-- <a href="#" routerLink="."><img src="assets/img/arrow.png" alt="..."></a>
+          <p style="display: inline-block; margin-left: 20px">Explore Connection & Activity</p> -->
+      </div>
+    </div>
+  </div>
+  <div class="contentBlock" id="main">
+    <div fxLayout="row">
+      <div fxFlex="100" class="grid-space">
+          <mat-card class="filter1">
+            <p>Filter</p>
+
+            <mat-button-toggle-group  aria-label="Select an option">
+              <mat-button-toggle ToggleType="radio" value="Near me" [ngClass]="{'active': addClass}" (click)="filter_value(1)">Near me</mat-button-toggle>
+              <mat-button-toggle ToggleType="radio" value="My Connection" (click)="filter_value(2)">My Connection</mat-button-toggle>
+              <mat-button-toggle ToggleType="radio" value="All Profiles" (click)="filter_value(3)">All Profiles</mat-button-toggle>
+            </mat-button-toggle-group>
+            
+          </mat-card>
+          <mat-card class="filter2">
+              <p>Type Of Ride</p>
+              <ion-select placeholder="All" style="padding: 0.75em 0px;margin-top: -11px;z-index: 0" [ngModelOptions]="{standalone: true}" [(ngModel)]="selected" multiple>
+                  <ion-select-option value="" style="z-index: -1;">All</ion-select-option>  
+                <ion-select-option *ngFor="let item of categorytype;" value="{{item.id}}">{{item.catname}}</ion-select-option>
+                </ion-select>
+          <!-- <ion-select placeholder="All" style="z-index: -1;padding: 0.75em 0px;margin-top: -11px;" [ngModelOptions]="{standalone: true}" [(ngModel)]="selected" multiple>
+            <ion-select-option value="" style="z-index: -1;">All</ion-select-option>
+            <ion-select-option *ngFor="let item of categorytype;" value="{{item.id}}">{{item.catname}}</ion-select-option>
+          </ion-select> -->
+          
+          </mat-card>
+          <!-- <mat-card class="filter2">
+            <p>Filter</p>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle ToggleType="radio" value="Connection" [ngClass]="{'active': addClass}">Connection</mat-button-toggle>
+              <mat-button-toggle ToggleType="radio" value="Content">Content</mat-button-toggle>
+            </mat-button-toggle-group>
+          </mat-card>
+          <mat-card class="filter3">
+            <p>Distance <span class="float-right">{{matslider.value}}km</span></p>
+            <mat-slider #matslider value="35"></mat-slider> -->
+            
+          <!-- </mat-card> -->
+          <button mat-flat-button class="btncreate_account btn_gradient mt-50" (click)="Search()">Search</button>
+          <div class="mt-30"></div>
+      </div>
+      </div>
+      
+  </div>

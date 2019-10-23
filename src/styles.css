@@ -1,0 +1,205 @@
+/* You can add global styles to this file, and also import other style files */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #171f24;
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight:400;
+}
+.space0{
+    margin-top: 0 !important;
+}
+.space6 {
+    margin-top: 6px !important; }
+  .space8 {
+    margin-top: 8px !important; }
+  .space10 {
+    margin-top: 10px !important; }
+  .space15 {
+    margin-top: 15px !important; }
+  .space20 {
+    margin-top: 20px !important; }
+  .space25 {
+    margin-top: 25px !important; }
+  .space30 {
+    margin-top: 30px !important; }
+    .space35 {
+    margin-top: 35px !important; }
+  .space40 {
+    margin-top: 40px !important; }
+  .space50 {
+    margin-top: 50px !important; }
+  .space60 {
+    margin-top: 60px !important; }
+  .space70 {
+    margin-top: 70px !important; }
+  .space80 {
+    margin-top: 80px !important; }
+
+
+input:focus{
+    outline: none;
+}
+p {
+	margin-top: 0;
+}
+.text-center {
+	text-align: center!important
+}
+.padTop{
+    padding-top: 15px;
+}
+.grid-space{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.mx-auto,.contentBlock{
+    margin-right:auto!important;
+    margin-left:auto!important;
+}
+.ml-auto{
+    margin-left:auto!important;
+}
+.mb-0{
+    margin-bottom:0!important
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.d-block{
+    display:block!important;
+}
+.lineHeight-18{
+    line-height: 18px;
+}
+.tagOne,.default_clr{
+    color: #778087;
+}
+.tagOne{
+    font-size: 17px;
+}
+.small-tag{
+    font-size: 12px;
+}
+.headOne{
+    font-size: 34px;
+}
+.contentBlock{
+    max-width: 576px;
+}
+.btncreate_account{
+    color: #fff;    
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 30px !important;
+    padding: 15px 15px !important;
+    line-height: normal !important;
+    width: 100%;
+    max-width: 315px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    display: block !important;
+    box-shadow: 0 1px 15px 1px rgba(191, 191, 191, 0.6)!important;
+}
+.btn_gradient1{
+    background-image: linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -webkit-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -moz-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    background-image: -ms-linear-gradient(141deg, #df25fc 0%, #df25fc 20%, #9025fc 75%);
+    margin: 36px auto 18px;
+}
+.btn_gradient{
+    background : linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -moz-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    background: -o-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%);
+    /* background-image: -webkit-linear-gradient(141deg, #9025fc 0%, #9025fc 20%, #1308fe 75%); */   
+}
+.txt_white{
+    color: #fff;
+}
+.no-underline{
+    text-decoration: none;
+}
+.linktag{
+    color: #1308fe;
+}
+.prev_arrow{
+    display: flex;
+}
+.mr-30{
+    margin-right: 32px;
+}
+.padleft15{
+    padding-left: 15px;
+}
+.topSpace{
+    padding-top: 20px;
+}
+.userName{
+    font-size: 22px;
+}
+.user-icon{
+    width: 40px ;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5px 25px #e6e6e6;
+    margin-right: 18px;
+}
+/* ================================== */
+.cdk-overlay-pane .mat-dialog-container{
+    box-shadow: none;
+    background: transparent;
+    color: rgba(0,0,0,.87);
+}
+.cdk-overlay-dark-backdrop {
+    background: rgba(144, 37, 252, 0.5);
+}
+
+.search_btn .mat-button-wrapper{
+    padding: 0;
+}
+/* .activitie_tab .mat-tab-label {
+    padding: 10px 15px;
+    width: 33.33%;
+}
+.activitie_tab .mat-tab-label .mat-tab-label-content{
+    font-size: 24px;
+    color: #aab2b7;
+}
+.activitie_tab .mat-tab-label.mat-tab-label-active .mat-tab-label-content{
+    color: #171f24;
+} */
+
+/* .box_shadow{
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.10) !important; 
+} */
+
+/* ==========Media ============*/
+@media(max-width:360px){
+    .headOne {
+        font-size: 28px;
+    }
+    .btncreate_account{
+        max-width: 230px;
+    }
+}

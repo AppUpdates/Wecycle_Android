@@ -1,0 +1,47 @@
+<section class="notification_section topSpace" id="main">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <!-- <a href="#" routerLink="/welcome" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a> -->
+          <p>Profile Notifications</p>
+        </div>
+        <app-header></app-header>
+      </div>
+      <div class="space40"></div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px"
+      *ngFor="let notify of mynotification; let first = first" [ngClass]="first?'':'space30'">
+       <div fxLayout="row" fxLayoutAlign="start center" class="notifyBlock">
+         <img src="http://68.183.101.193/android/api/{{notify.profile}}" class="user-icon" alt="user image" style="    width: 40px;
+         height: 40px;
+         border-radius: 50px;">
+         <div class="notifycontent">
+           <p class="mb-0 personName" style="margin-top: 0px;" >{{notify.first_name}} {{notify.last_name}} <span class="default_clr">{{notify.message}}</span></p>
+           <p class="mb-0 small-tag" style="margin-top: 0px;font-size: 12px">{{notify.time_ago}}</p>
+         </div>
+       </div>
+       <div>
+         <div class="iconPlace btn_gradient">
+           <img src="assets/img/heart.png" alt="icons" >
+         </div>
+       </div>
+     </div>
+      <!-- <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px"
+       *ngFor="let x of notifications; let first = first" [ngClass]="first?'':'space30'">
+        <div fxLayout="row" fxLayoutAlign="start center" class="notifyBlock">
+          <img [src]="x.img" class="user-icon" alt="user image">
+          <div class="notifycontent">
+            <p class="mb-0 personName">{{x.person}} <span class="default_clr">{{x.action}}</span></p>
+            <p class="mb-0 small-tag">{{x.time}}</p>
+          </div>
+        </div>
+        <div>
+          <div class="iconPlace btn_gradient">
+            <img [src]="x.icons" alt="icons" >
+          </div>
+        </div>
+      </div> -->
+      </div>
+    </div>
+</section>
+

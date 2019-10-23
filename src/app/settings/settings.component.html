@@ -1,0 +1,57 @@
+<section class="connection_section topSpace" id="main">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <!-- <a href="#" routerLink="/welcome" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a> -->
+          <p class="mb-0" style="margin-left: 15px;">Setting</p>
+        </div>
+        <app-header style="margin-right: 15px;"></app-header>
+</div>
+<section class="settings topSpace">
+  <div fxLayout="column">
+    <div fxFlex="100" class="">      
+     
+          <mat-list style="margin-left: 10px;margin-right: 10px;">
+              <mat-list-item (click)="GoToProfile()"
+              >Personal Info 
+            </mat-list-item>
+            <mat-divider style="border-color: #ddd;"></mat-divider>
+            <ion-item>
+                
+                <ion-label>
+                  Notification
+                </ion-label>
+                <ion-toggle [(ngModel)]="is_notfication" (ionChange)="changeNotificationValue(is_notfication)" checked="false" item-end></ion-toggle>
+               
+              </ion-item>
+            <mat-divider style="border-color: #ddd;"></mat-divider>
+            
+     
+            <mat-list-item (click)="SendFeedback()">Send feedback<img src="assets/img/arrow.png" class="arrow_next" />
+            </mat-list-item>
+            <mat-divider style="border-color: #ddd;"></mat-divider>
+            <mat-list-item (click)="SendBug()">Report a bug<img src="assets/img/arrow.png" class="arrow_next"
+            /></mat-list-item>
+            <mat-divider style="border-color: #ddd;"></mat-divider>
+            <mat-list-item (click)="GoToChangePassword()"
+            >Change Password<img src="assets/img/arrow.png" class="arrow_next"
+            />
+          </mat-list-item>
+          <mat-divider style="border-color: #ddd;"></mat-divider>
+            <mat-list-item (click)="GoToAbout()"
+              >About<img src="assets/img/arrow.png" class="arrow_next"
+            /></mat-list-item>
+            <mat-divider style="border-color: #ddd;"></mat-divider>
+            <!-- <mat-list-item
+            >LogOut
+          </mat-list-item> -->
+   
+          </mat-list>
+         
+        
+       
+    </div>
+  </div>
+</section>
+</div>

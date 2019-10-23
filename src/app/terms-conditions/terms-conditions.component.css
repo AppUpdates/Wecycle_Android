@@ -1,0 +1,44 @@
+.above_title {
+    color: #171f24;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .above_title span {
+    margin-left: 30px;
+    top: -2px;
+    position: relative;
+  }
+  h4,
+  .contentText p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .contentText p{
+    color: #778087;
+  }
+  .main_title{
+    margin-top: 35px;
+    margin-bottom: 14px;
+    font-size: 28px;
+  }
+  .bottom_shadow {
+    background-image: -webkit-linear-gradient(bottom, transparent, #fff);
+    background-image: -moz-linear-gradient(bottom, transparent, #fff);
+    background-image: -o-linear-gradient(bottom, transparent, #fff);
+    background-image: linear-gradient(to top, #fff, transparent);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 200px;
+    left: 0;
+  }
+  .contentText{
+    padding-bottom: 50px;
+  }
+  #main{
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+  

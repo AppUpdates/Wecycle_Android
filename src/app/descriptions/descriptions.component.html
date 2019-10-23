@@ -1,0 +1,37 @@
+<section class="short_description topSpace contentBlock" id="main">
+  <div fxLayout="column">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a href="#" routerLink="/profile" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+        </div>
+        <app-header></app-header>
+      </div>
+
+        <p class="profile_title">Profile</p>
+      
+        <form class="descriptions-form">           
+          <mat-form-field floatLabel="never">
+            <textarea matInput placeholder="Short Descriptions about you" [ngModelOptions]="{standalone: true}" [(ngModel)]="description"></textarea>
+          </mat-form-field>           
+        </form>
+
+        <h6 class="connect_social">Connect to social network profile</h6>
+      
+        <form class="buttons-form text-center">           
+          <div class="example-button-row mt-15">
+            <button mat-raised-button class="social_button twitter_btn">Twitter</button>
+            <button mat-raised-button class="social_button google_btn">Google+</button>
+          </div>
+          <div class="example-button-row mt-15">
+            <button mat-raised-button class="social_button youtube_btn">Youtube</button>
+            <button mat-raised-button class="social_button facebook_btn">Facebook</button>
+          </div> 
+          <button mat-flat-button mat-raised-button (click)="UpdateProfile()" class="btncreate_account btn_gradient done_des">Done</button>          
+        </form>   
+        
+        <!--  -->
+      
+    </div>
+  </div>
+</section>

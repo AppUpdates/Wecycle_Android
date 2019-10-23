@@ -1,0 +1,99 @@
+<ion-content class="has-header">
+<section class="request_follow topSpace">
+  <div fxLayout="column" class="contentBlock">
+    <div fxFlex="100" class="grid-space">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <a href="#" routerLink="/activity" class="prev_arrow mr-30"><img src="assets/img/arrow.png" ></a>
+          <p class="mb-0">Profile</p>
+        </div>
+        <!-- <app-header></app-header> -->
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="space20">
+        <div class="profile_pic">
+          <img src="{{profile}}" onerror="this.onerror=null;this.src='assets/img/Mask_img.png';">
+        </div>
+        <div>
+          <button mat-flat-button class="btncreate_account btn_gradient" (click)="followuser()" *ngIf="is_follow_request_sent == null && is_follow_request_receive == null">
+              <i class="material-icons plus_icon">add</i>Follow</button>
+          <button mat-flat-button class="btncreate_account btn_gradient" (click)="followuser()" *ngIf="is_follow_request_sent == '0'">
+            <i class="material-icons plus_icon"></i>Requested</button>
+            <button mat-flat-button class="btncreate_account btn_gradient" (click)="needtoaccept()" *ngIf="is_follow_request_receive == '0'">
+              <i class="material-icons plus_icon"></i>Need To Accept</button>
+          <button mat-flat-button class="btncreate_account btn_gradient space15">Message</button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" class="space20">
+        <h4 class="mb-0 userName">{{fname}} {{lname}}</h4>
+        <!-- <a href="#" routerLink="." class="linktag">#dhrup.ronak</a> -->
+      </div>
+      <p class="small-tag default_clr space10 lineHeight-18">{{description}}</p>
+      <div fxLayout="row" fxLayoutAlign="space-between start" class="text-center stats">
+        <div>
+          <p class="tagOne">{{totalMedia}}</p>
+          <p class="small-tag">Photos</p>
+        </div>
+        <div>
+          <p class="tagOne">0</p>
+          <p class="small-tag">Documents</p>
+        </div>
+        <div>
+          <p class="tagOne">0</p>
+          <p class="small-tag">Articles</p>
+        </div>
+        <div>
+          <p class="tagOne">{{totalFollowers}}</p>
+          <p class="small-tag">Followers</p>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" class="contentBlock padleft15 overflowhidden space35">
+      <p class="mb-0 followertag">Followers</p>
+      <div class=" card">
+        <div *ngFor="let follower of follower_list" class="text-center card--content">
+            <!-- assets/img/follower.png -->
+            <img src="http://68.183.101.193/android/api/{{follower.profile}}" class="img-follower">
+            <p class="mb-0 small-tag">{{follower.first_name}} {{follower.last_name}}</p>
+        </div>
+      </div>
+    </div>
+  <div  class="contentBlock grid-space space35">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <p class="mb-0">Photos</p>
+      <a href="#" class="small-tag">View All</a>
+    </div>
+    <div class="space30" fxLayout="row" fxLayoutAlign="space-between center">
+      <div *ngFor="let image of post_images | slice:0:2; let i=index" fxFlex="33.33" class="photoBlocks">
+        <div class="photosBlock">
+            <!-- assets/img/photos.png -->
+          <img src="http://68.183.101.193/android/api/{{image.post_media}}" >
+        </div>
+      </div>
+      <div *ngIf="total_post_images>2" fxFlex="33.33" class="photoBlocks">
+        <div class="photosBlock btn_gradient" fxLayout="row" fxLayoutAlign="center center">
+            <!-- <img src="http://68.183.101.193/android/api/{{post_images[2]}}" > -->
+          <a href="#" routerLink="." class="txt_white no-underline">+{{remaining_post_images}}</a>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="space35">
+      <p class="mb-0">Articles</p>
+      <a href="#" class="small-tag">View All</a>
+    </div>
+    <div *ngFor="let item of mypost" class="articleBlock">
+      <p style="margin-left: 9px;    padding-top: 7px;">{{item.postname}}</p>
+      <ion-slides>
+          <ion-slide *ngFor="let post_media of item.post_media">     
+              <ion-card>
+                  <img src="http://68.183.101.193/android/api/{{post_media}}"  class="w-100 mask_img" alt="..."> 
+              </ion-card>
+          
+          </ion-slide>
+        </ion-slides>
+      <!-- <img src="http://68.183.101.193/android/api/{{item.post_media[0]}}" class="w-100" alt="..." /> -->
+    </div>
+    
+  </div>   
+</section>
+</ion-content>

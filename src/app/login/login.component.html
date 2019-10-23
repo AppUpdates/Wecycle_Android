@@ -1,0 +1,29 @@
+<!-- <ion-content class="has-header"> -->
+<section class="Login_section topSpace" id="main">
+    <div fxLayout="column" class="contentBlock">
+      <div fxFlex="100" class="grid-space">
+        <a href="#" routerLink="/start-page" class="prev_arrow"><img src="assets/img/arrow.png" ></a>
+        <h2 class="headOne">Login<br> Welcome Back</h2>      
+      </div>
+    </div>
+    <div class="gradientBack"></div>
+    <div fxLayout="column" class="contentBlock">
+      <div fxFlex="100" class="grid-space">    
+        <div class="blockShadow">
+          <form class="example-form" (ngSubmit)="Login()">
+            <mat-form-field floatLabel="never" >          
+              <input matInput placeholder="Email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field floatLabel="never">
+              <input matInput placeholder="Password" [(ngModel)]="user.password" name="password" [type]="hide ? 'password' : 'text'" [ngModelOptions]="{standalone: true}">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>          
+          </form>
+        </div>
+        <button mat-flat-button class="btncreate_account btn_gradient" (click)="Login()">Login</button>
+        <a class="default_clr d-block space60 text-center"  routerLink="/forgotpassword">I don't remember my password</a>
+        <div class="space30"></div>
+      </div>
+    </div>
+  </section>
+  <!-- </ion-content> -->
